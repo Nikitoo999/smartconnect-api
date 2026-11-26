@@ -1,0 +1,1114 @@
+{
+  "apidogProject": "1.0.0",
+  "$schema": {
+    "app": "apidog",
+    "type": "project",
+    "version": "1.2.0"
+  },
+  "info": {
+    "name": "Api",
+    "description": "",
+    "mockRule": {
+      "rules": [],
+      "enableSystemRule": true
+    }
+  },
+  "projectSetting": {
+    "id": "1420335",
+    "auth": {},
+    "securityScheme": {},
+    "gateway": [],
+    "language": "es-ES",
+    "apiStatuses": [
+      "developing",
+      "testing",
+      "released",
+      "deprecated"
+    ],
+    "mockSettings": {},
+    "preProcessors": [],
+    "postProcessors": [],
+    "advancedSettings": {
+      "allowAutomationWriteAutomationCreatedSprintBranch": true,
+      "enableJsonc": false,
+      "enableBigint": false,
+      "responseValidate": true,
+      "enableTestScenarioSetting": false,
+      "enableYAPICompatScript": false,
+      "isDefaultUrlEncoding": 3,
+      "publishedDocUrlRules": {
+        "defaultRule": "SLUGIFY_WITH_RESOURCE_KEY",
+        "resourceKeyStandard": "NEW",
+        "enableHierarchicalSlug": false
+      }
+    },
+    "initialDisabledMockIds": [],
+    "servers": [
+      {
+        "id": "default",
+        "name": "Servidor predeterminado",
+        "moduleId": 1533797
+      }
+    ],
+    "cloudMock": {
+      "enable": false,
+      "security": "free",
+      "tokenKey": "apidogToken",
+      "isCreatedAutomaticallyByDefaultConfigFromAdmin": true
+    }
+  },
+  "apiCollection": [
+    {
+      "name": "Root",
+      "id": 11625717,
+      "auth": {
+        "type": "bearer",
+        "bearer": {
+          "token": "{{token}}"
+        }
+      },
+      "securityScheme": {},
+      "parentId": 0,
+      "serverId": "",
+      "description": "",
+      "identityPattern": {
+        "httpApi": {
+          "type": "methodAndPath",
+          "bodyType": ""
+        }
+      },
+      "shareSettings": {},
+      "visibility": "SHARED",
+      "moduleId": 1533797,
+      "preProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "postProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "inheritPostProcessors": {},
+      "inheritPreProcessors": {},
+      "items": [
+        {
+          "name": "Login JWT",
+          "api": {
+            "id": "47580784",
+            "method": "post",
+            "path": "/api/token/",
+            "parameters": {},
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "145881402",
+                "code": 200,
+                "name": "Correcto",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {
+                    "refresh": {
+                      "type": "string"
+                    },
+                    "access": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "refresh",
+                    "access"
+                  ]
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "application/json",
+              "parameters": [],
+              "jsonSchema": {
+                "type": "object",
+                "properties": {}
+              },
+              "required": true,
+              "mediaType": "",
+              "examples": [
+                {
+                  "mediaType": "application/json",
+                  "value": "{\r\n  \"username\": \"usuario_prueba\",\r\n  \"password\": \"su_clave\"\r\n}"
+                }
+              ],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "developing",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 10,
+            "cases": [],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1533797,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [
+              {
+                "type": "extractor",
+                "data": {
+                  "variableName": "token",
+                  "variableType": "environment",
+                  "subject": "responseJson",
+                  "template": "",
+                  "expression": "$.access",
+                  "extractSettings": {
+                    "expression": "$.access",
+                    "continueExtractorSettings": {
+                      "isContinueExtractValue": false,
+                      "JsonArrayValueIndexValue": ""
+                    }
+                  }
+                },
+                "defaultEnable": false,
+                "enable": true,
+                "id": "YGZf1kBkqHmVA-l-Mj1VR"
+              },
+              {
+                "type": "extractor",
+                "data": {
+                  "variableName": "refresh",
+                  "variableType": "environment",
+                  "subject": "responseJson",
+                  "template": "",
+                  "expression": "$.refresh",
+                  "extractSettings": {
+                    "expression": "$.refresh",
+                    "continueExtractorSettings": {
+                      "isContinueExtractValue": false,
+                      "JsonArrayValueIndexValue": ""
+                    }
+                  }
+                },
+                "defaultEnable": false,
+                "enable": true,
+                "id": "89zRf2Ti3PF_tqUlFksAs"
+              }
+            ],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Listar viviendas",
+          "api": {
+            "id": "47582403",
+            "method": "get",
+            "path": "/api/viviendas/",
+            "parameters": {},
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "126527557",
+                "code": 200,
+                "name": "Correcto",
+                "jsonSchema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "terreno": {
+                        "type": "integer"
+                      },
+                      "terreno_nombre": {
+                        "type": "string"
+                      },
+                      "tipo": {
+                        "type": "string"
+                      },
+                      "tipo_display": {
+                        "type": "string"
+                      },
+                      "identificador": {
+                        "type": "string"
+                      },
+                      "descripcion": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "terreno",
+                      "terreno_nombre",
+                      "tipo",
+                      "tipo_display",
+                      "identificador",
+                      "descripcion"
+                    ]
+                  }
+                },
+                "contentType": "json"
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "none",
+              "parameters": [],
+              "required": true,
+              "mediaType": "",
+              "examples": [],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "developing",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 20,
+            "cases": [],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1533797,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Detalle vivienda",
+          "api": {
+            "id": "47584357",
+            "method": "get",
+            "path": "/api/viviendas/1/",
+            "parameters": {},
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "113759987",
+                "code": 200,
+                "name": "Correcto",
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "terreno": {
+                      "type": "integer"
+                    },
+                    "terreno_nombre": {
+                      "type": "string"
+                    },
+                    "tipo": {
+                      "type": "string"
+                    },
+                    "tipo_display": {
+                      "type": "string"
+                    },
+                    "identificador": {
+                      "type": "string"
+                    },
+                    "descripcion": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "terreno",
+                    "terreno_nombre",
+                    "tipo",
+                    "tipo_display",
+                    "identificador",
+                    "descripcion"
+                  ]
+                },
+                "contentType": "json"
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "none",
+              "parameters": [],
+              "required": true,
+              "mediaType": "",
+              "examples": [],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "developing",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 30,
+            "cases": [],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1533797,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Filtrar por Terreno",
+          "api": {
+            "id": "47584481",
+            "method": "get",
+            "path": "/api/viviendas/",
+            "parameters": {
+              "query": [
+                {
+                  "id": "WFiWrtC3mH",
+                  "name": "terreno",
+                  "example": "2",
+                  "required": false,
+                  "description": "",
+                  "enable": true,
+                  "type": "string"
+                }
+              ]
+            },
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "123681519",
+                "code": 200,
+                "name": "Correcto",
+                "jsonSchema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "terreno": {
+                        "type": "integer"
+                      },
+                      "terreno_nombre": {
+                        "type": "string"
+                      },
+                      "tipo": {
+                        "type": "string"
+                      },
+                      "tipo_display": {
+                        "type": "string"
+                      },
+                      "identificador": {
+                        "type": "string"
+                      },
+                      "descripcion": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "contentType": "json"
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "none",
+              "parameters": [],
+              "required": true,
+              "mediaType": "",
+              "examples": [],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "developing",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 40,
+            "cases": [],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1533797,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Crear vivienda",
+          "api": {
+            "id": "47584505",
+            "method": "post",
+            "path": "/api/viviendas/",
+            "parameters": {},
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "164453686",
+                "code": 201,
+                "name": "Creado",
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "terreno": {
+                      "type": "integer"
+                    },
+                    "terreno_nombre": {
+                      "type": "string"
+                    },
+                    "tipo": {
+                      "type": "string"
+                    },
+                    "tipo_display": {
+                      "type": "string"
+                    },
+                    "identificador": {
+                      "type": "string"
+                    },
+                    "descripcion": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "terreno",
+                    "terreno_nombre",
+                    "tipo",
+                    "tipo_display",
+                    "identificador",
+                    "descripcion"
+                  ]
+                },
+                "contentType": "json"
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "application/json",
+              "parameters": [],
+              "jsonSchema": {
+                "type": "object",
+                "properties": {}
+              },
+              "required": true,
+              "mediaType": "",
+              "examples": [
+                {
+                  "mediaType": "application/json",
+                  "value": "{\r\n  \"terreno\": 2,\r\n  \"tipo\": \"casa\",\r\n  \"identificador\": \"Casa 10\",\r\n  \"descripcion\": \"Casa con terraza\"\r\n}"
+                }
+              ],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "developing",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 50,
+            "cases": [],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1533797,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Actualizar vivienda",
+          "api": {
+            "id": "47584517",
+            "method": "patch",
+            "path": "/api/viviendas/1/",
+            "parameters": {},
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "146063290",
+                "code": 200,
+                "name": "Correcto",
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "terreno": {
+                      "type": "integer"
+                    },
+                    "terreno_nombre": {
+                      "type": "string"
+                    },
+                    "tipo": {
+                      "type": "string"
+                    },
+                    "tipo_display": {
+                      "type": "string"
+                    },
+                    "identificador": {
+                      "type": "string"
+                    },
+                    "descripcion": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "terreno",
+                    "terreno_nombre",
+                    "tipo",
+                    "tipo_display",
+                    "identificador",
+                    "descripcion"
+                  ]
+                },
+                "contentType": "json"
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "application/json",
+              "parameters": [],
+              "jsonSchema": {
+                "type": "object",
+                "properties": {}
+              },
+              "required": true,
+              "mediaType": "",
+              "examples": [
+                {
+                  "mediaType": "application/json",
+                  "value": "{\"descripcion\": \"Casa remodelada\"}"
+                }
+              ],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "developing",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 60,
+            "cases": [],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1533797,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Eliminar vivienda",
+          "api": {
+            "id": "47584518",
+            "method": "delete",
+            "path": "/api/viviendas/5/",
+            "parameters": {},
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "152680141",
+                "code": 204,
+                "name": "Sin contenido",
+                "contentType": "noContent"
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "none",
+              "parameters": [],
+              "required": true,
+              "mediaType": "",
+              "examples": [],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "developing",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 70,
+            "cases": [],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1533797,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Refresh Token",
+          "api": {
+            "id": "47584539",
+            "method": "post",
+            "path": "/api/token/refresh/",
+            "parameters": {},
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "185743779",
+                "code": 200,
+                "name": "Correcto",
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {
+                    "access": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "access"
+                  ]
+                },
+                "contentType": "json"
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "application/json",
+              "parameters": [],
+              "jsonSchema": {
+                "type": "object",
+                "properties": {}
+              },
+              "required": true,
+              "mediaType": "",
+              "examples": [
+                {
+                  "mediaType": "application/json",
+                  "value": "{\"refresh\": \"{{refresh}}\"}"
+                }
+              ],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "developing",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 80,
+            "cases": [],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1533797,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        }
+      ]
+    }
+  ],
+  "socketCollection": [],
+  "docCollection": [],
+  "webSocketCollection": [],
+  "socketIOCollection": [],
+  "mcpClientCollection": [],
+  "responseCollection": [
+    {
+      "_databaseId": 1864354,
+      "updatedAt": "2026-11-26T00:42:14.000Z",
+      "id": 1864354,
+      "name": "Root",
+      "type": "root",
+      "children": [],
+      "moduleId": 1533797,
+      "parentId": 0,
+      "ordering": [],
+      "items": []
+    }
+  ],
+  "schemaCollection": [
+    {
+      "id": 3946263,
+      "name": "Root",
+      "visibility": "SHARED",
+      "moduleId": 1533797,
+      "items": [],
+      "ordering": []
+    }
+  ],
+  "securitySchemeCollection": [
+    {
+      "id": 2638252,
+      "moduleId": 1533797,
+      "name": "Root",
+      "items": [],
+      "ordering": []
+    }
+  ],
+  "oasComponentCollection": [],
+  "requestCollection": [
+    {
+      "name": "Root",
+      "children": [],
+      "ordering": [
+        "requestFolder.11330141"
+      ],
+      "items": []
+    }
+  ],
+  "apiTestCaseCollection": [
+    {
+      "id": 0,
+      "name": "Root",
+      "children": [],
+      "items": []
+    }
+  ],
+  "testCaseReferences": [],
+  "environments": [],
+  "commonScripts": [],
+  "databaseConnections": [],
+  "globalVariables": [],
+  "commonParameters": null,
+  "customFunctions": [],
+  "projectTestCaseCategories": [
+    {
+      "id": 2038475,
+      "name": "Positivo",
+      "description": "Entradas válidas y resultados esperados correctos, que representan un uso típico."
+    },
+    {
+      "id": 2038476,
+      "name": "Negativo",
+      "description": "Entradas negativas o no válidas, como campos faltantes, tipos incorrectos, métodos no admitidos, etc."
+    },
+    {
+      "id": 2038477,
+      "name": "Límite",
+      "description": "Condiciones extremas o de borde, como longitud máxima de cadena, valores vacíos, cero, null, etc."
+    },
+    {
+      "id": 2038478,
+      "name": "Seguridad",
+      "description": "Casos que pueden exponer riesgos de seguridad del API."
+    },
+    {
+      "id": 2038479,
+      "name": "Otros",
+      "description": "Casos no clasificados en categorías existentes."
+    }
+  ],
+  "projectTestCaseTags": [
+    {
+      "id": 10132744,
+      "name": "Solo campos obligatorios",
+      "description": "Enviar solo los campos obligatorios con valores válidos, omitiendo todos los opcionales, para probar la solicitud mínima válida."
+    },
+    {
+      "id": 10132745,
+      "name": "Semántica válida",
+      "description": "Usar valores sintácticamente correctos que también tengan sentido en la lógica de negocio o el contexto del dominio."
+    },
+    {
+      "id": 10132746,
+      "name": "Cobertura de combinaciones de enum",
+      "description": "Para todos los parámetros de tipo enumeración, aplicar diseño ortogonal para construir sistemáticamente combinaciones de casos de prueba de parámetros y sus valores de enum, con el fin de cubrir los enums."
+    },
+    {
+      "id": 10132747,
+      "name": "Otros casos positivos",
+      "description": "Proporcionar entradas realistas y válidas que cumplan la especificación del API, produciendo el resultado correcto y esperado."
+    },
+    {
+      "id": 10132748,
+      "name": "Campos obligatorios ausentes",
+      "description": "Omitir uno o más campos obligatorios en el cuerpo o parámetros de la solicitud."
+    },
+    {
+      "id": 10132749,
+      "name": "Valores no válidos",
+      "description": "Proporcionar valores con tipo y formato correctos, pero lógicamente no válidos para el campo."
+    },
+    {
+      "id": 10132750,
+      "name": "Errores de tipo",
+      "description": "Usar valores con tipos de datos incorrectos, como enviar una cadena en lugar de un entero."
+    },
+    {
+      "id": 10132751,
+      "name": "Errores de formato",
+      "description": "Proporcionar valores con un formato incorrecto, p. ej., patrón de fecha erróneo, dirección de correo mal formada."
+    },
+    {
+      "id": 10132752,
+      "name": "Errores semánticos",
+      "description": "Usar valores sintáctica y formalmente correctos que sean lógicamente imposibles o violen reglas del dominio."
+    },
+    {
+      "id": 10132753,
+      "name": "Otros casos negativos",
+      "description": "Proporcionar entradas inválidas o inesperadas que deberían activar el manejo de errores o el rechazo por parte del API."
+    },
+    {
+      "id": 10132754,
+      "name": "Nulo",
+      "description": "Debe ser el literal JSON `null` (no vacío, no \"null\")."
+    },
+    {
+      "id": 10132755,
+      "name": "Cero",
+      "description": "Debe ser el literal numérico 0."
+    },
+    {
+      "id": 10132756,
+      "name": "Valores vacíos",
+      "description": "Debe ser \"\"."
+    },
+    {
+      "id": 10132757,
+      "name": "Valores máximos",
+      "description": "Proporcionar los valores mínimo y máximo permitidos exactos para campos numéricos o de fecha."
+    },
+    {
+      "id": 10132758,
+      "name": "Valores mínimos",
+      "description": "Proporcionar los valores mínimo y máximo permitidos exactos para campos numéricos o de fecha."
+    },
+    {
+      "id": 10132759,
+      "name": "Desbordamiento",
+      "description": "Proporcionar valores justo más allá de los límites mínimo o máximo permitidos."
+    },
+    {
+      "id": 10132760,
+      "name": "Subdesbordamiento",
+      "description": "Proporcionar valores justo más allá de los límites mínimo o máximo permitidos."
+    },
+    {
+      "id": 10132761,
+      "name": "Cadenas demasiado largas",
+      "description": "Proporcionar cadenas más largas que la longitud máxima permitida, o más cortas que la longitud mínima requerida."
+    },
+    {
+      "id": 10132762,
+      "name": "Cadenas demasiado cortas",
+      "description": "Proporcionar cadenas más largas que la longitud máxima permitida, o más cortas que la longitud mínima requerida."
+    },
+    {
+      "id": 10132763,
+      "name": "Autorización a nivel de objeto rota",
+      "description": "Los usuarios acceden o manipulan objetos de datos sin la autorización adecuada."
+    },
+    {
+      "id": 10132764,
+      "name": "Control de acceso",
+      "description": "Restringir los recursos y acciones a los que los usuarios pueden acceder según roles, permisos o atributos."
+    },
+    {
+      "id": 10132765,
+      "name": "Fallos de autenticación",
+      "description": "La autenticación es débil, está mal configurada o se evita, permitiendo acceso no autorizado."
+    },
+    {
+      "id": 10132766,
+      "name": "Inyección SQL",
+      "description": "Insertar código SQL malicioso en entradas para probar vulnerabilidades de inyección SQL."
+    },
+    {
+      "id": 10132767,
+      "name": "Inyección XSS",
+      "description": "Inyectar JavaScript o etiquetas HTML para probar vulnerabilidades de XSS."
+    },
+    {
+      "id": 10132768,
+      "name": "Entrada fuzz",
+      "description": "Enviar cargas útiles grandes o generadas aleatoriamente para probar validación de entrada y estabilidad."
+    },
+    {
+      "id": 10132769,
+      "name": "Inyección de comandos",
+      "description": "Insertar comandos de shell en entradas para probar vulnerabilidades de ejecución de comandos."
+    },
+    {
+      "id": 10132770,
+      "name": "Inyección JSON",
+      "description": "Insertar estructuras JSON maliciosas o inesperadas para probar el análisis y validación."
+    },
+    {
+      "id": 10132771,
+      "name": "Inyección NoSQL",
+      "description": "Proporcionar consultas u operadores específicos de NoSQL para probar inyección."
+    },
+    {
+      "id": 10132772,
+      "name": "Otros",
+      "description": "Casos no clasificados en categorías existentes."
+    }
+  ],
+  "projectAssociations": [],
+  "moduleSettings": [
+    {
+      "id": "1533797",
+      "name": "Módulo predeterminado",
+      "description": "",
+      "moduleVariables": [],
+      "openApiInfo": {}
+    }
+  ]
+}
