@@ -98,6 +98,1413 @@
       "inheritPreProcessors": {},
       "items": [
         {
+          "name": "Puntos de acceso",
+          "id": 11647740,
+          "auth": {},
+          "securityScheme": {},
+          "parentId": 0,
+          "serverId": "",
+          "description": "",
+          "identityPattern": {
+            "httpApi": {
+              "type": "inherit",
+              "bodyType": "",
+              "fields": []
+            }
+          },
+          "shareSettings": {},
+          "visibility": "INHERITED",
+          "moduleId": 1533797,
+          "preProcessors": [
+            {
+              "id": "inheritProcessors",
+              "type": "inheritProcessors",
+              "data": {}
+            }
+          ],
+          "postProcessors": [
+            {
+              "id": "inheritProcessors",
+              "type": "inheritProcessors",
+              "data": {}
+            }
+          ],
+          "inheritPostProcessors": {},
+          "inheritPreProcessors": {},
+          "items": [
+            {
+              "name": "Crear Punto Acceso - Porton Principal",
+              "api": {
+                "id": "47655956",
+                "method": "post",
+                "path": "/api/puntos-acceso/",
+                "parameters": {
+                  "path": []
+                },
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "150556093",
+                    "code": 201,
+                    "name": "Creado",
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "terreno": {
+                          "type": "integer"
+                        },
+                        "terreno_nombre": {
+                          "type": "string"
+                        },
+                        "nombre": {
+                          "type": "string"
+                        },
+                        "tipo": {
+                          "type": "string"
+                        },
+                        "tipo_display": {
+                          "type": "string"
+                        },
+                        "activo": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "terreno",
+                        "terreno_nombre",
+                        "nombre",
+                        "tipo",
+                        "tipo_display",
+                        "activo"
+                      ]
+                    },
+                    "contentType": "json"
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {}
+                  },
+                  "required": true,
+                  "mediaType": "",
+                  "examples": [
+                    {
+                      "mediaType": "application/json",
+                      "value": "{\"terreno\": 1, \"nombre\": \"Portón Principal\", \"tipo\": \"porton\", \"activo\": true}"
+                    }
+                  ],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 10,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [],
+                "visibility": "INHERITED",
+                "moduleId": 1533797,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "Crear Punto Acceso - Puerta Peatonal Norte",
+              "api": {
+                "id": "47656303",
+                "method": "post",
+                "path": "/api/puntos-acceso/",
+                "parameters": {
+                  "path": []
+                },
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "150556093",
+                    "code": 201,
+                    "name": "Creado",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "terreno": {
+                          "type": "integer"
+                        },
+                        "terreno_nombre": {
+                          "type": "string"
+                        },
+                        "nombre": {
+                          "type": "string"
+                        },
+                        "tipo": {
+                          "type": "string"
+                        },
+                        "tipo_display": {
+                          "type": "string"
+                        },
+                        "activo": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "terreno",
+                        "terreno_nombre",
+                        "nombre",
+                        "tipo",
+                        "tipo_display",
+                        "activo"
+                      ]
+                    },
+                    "itemSchema": {},
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {}
+                  },
+                  "required": true,
+                  "mediaType": "",
+                  "examples": [
+                    {
+                      "mediaType": "application/json",
+                      "value": "{\"terreno\": 1, \"nombre\": \"Puerta Peatonal Norte\", \"tipo\": \"puerta\", \"activo\": true}"
+                    }
+                  ],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 16,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [],
+                "visibility": "INHERITED",
+                "moduleId": 1533797,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "Crear Punto Acceso - Porton Vehicular",
+              "api": {
+                "id": "47656306",
+                "method": "post",
+                "path": "/api/puntos-acceso/",
+                "parameters": {
+                  "path": []
+                },
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "150556093",
+                    "code": 201,
+                    "name": "Creado",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "terreno": {
+                          "type": "integer"
+                        },
+                        "terreno_nombre": {
+                          "type": "string"
+                        },
+                        "nombre": {
+                          "type": "string"
+                        },
+                        "tipo": {
+                          "type": "string"
+                        },
+                        "tipo_display": {
+                          "type": "string"
+                        },
+                        "activo": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "terreno",
+                        "terreno_nombre",
+                        "nombre",
+                        "tipo",
+                        "tipo_display",
+                        "activo"
+                      ]
+                    },
+                    "itemSchema": {},
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {}
+                  },
+                  "required": true,
+                  "mediaType": "",
+                  "examples": [
+                    {
+                      "mediaType": "application/json",
+                      "value": "{\"terreno\": 2, \"nombre\": \"Portón Vehicular\", \"tipo\": \"porton\", \"activo\": true}"
+                    }
+                  ],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 22,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [],
+                "visibility": "INHERITED",
+                "moduleId": 1533797,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "Crear Punto Acceso - Puerta Trasera",
+              "api": {
+                "id": "47656372",
+                "method": "post",
+                "path": "/api/puntos-acceso/",
+                "parameters": {
+                  "path": []
+                },
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "150556093",
+                    "code": 201,
+                    "name": "Creado",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "terreno": {
+                          "type": "integer"
+                        },
+                        "terreno_nombre": {
+                          "type": "string"
+                        },
+                        "nombre": {
+                          "type": "string"
+                        },
+                        "tipo": {
+                          "type": "string"
+                        },
+                        "tipo_display": {
+                          "type": "string"
+                        },
+                        "activo": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "terreno",
+                        "terreno_nombre",
+                        "nombre",
+                        "tipo",
+                        "tipo_display",
+                        "activo"
+                      ]
+                    },
+                    "itemSchema": {},
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {}
+                  },
+                  "required": true,
+                  "mediaType": "",
+                  "examples": [
+                    {
+                      "mediaType": "application/json",
+                      "value": "{\"terreno\": 2, \"nombre\": \"Puerta Trasera\", \"tipo\": \"puerta\", \"activo\": false}"
+                    }
+                  ],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 28,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [],
+                "visibility": "INHERITED",
+                "moduleId": 1533797,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "Listar Punto de acceso",
+              "api": {
+                "id": "47656405",
+                "method": "get",
+                "path": "/api/puntos-acceso/",
+                "parameters": {},
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "110696072",
+                    "code": 200,
+                    "name": "Correcto",
+                    "jsonSchema": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "terreno": {
+                            "type": "integer"
+                          },
+                          "terreno_nombre": {
+                            "type": "string"
+                          },
+                          "nombre": {
+                            "type": "string"
+                          },
+                          "tipo": {
+                            "type": "string"
+                          },
+                          "tipo_display": {
+                            "type": "string"
+                          },
+                          "activo": {
+                            "type": "boolean"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "terreno",
+                          "terreno_nombre",
+                          "nombre",
+                          "tipo",
+                          "tipo_display",
+                          "activo"
+                        ]
+                      }
+                    },
+                    "contentType": "json"
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "required": true,
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 38,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [],
+                "visibility": "INHERITED",
+                "moduleId": 1533797,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "Filtrar Punto de acceso",
+              "api": {
+                "id": "47656556",
+                "method": "get",
+                "path": "/api/puntos-acceso/",
+                "parameters": {
+                  "query": [
+                    {
+                      "id": "kkexF2UB3C",
+                      "name": "terreno",
+                      "example": "1",
+                      "required": false,
+                      "description": "",
+                      "enable": true,
+                      "type": "string"
+                    }
+                  ]
+                },
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "177782380",
+                    "code": 200,
+                    "name": "Correcto",
+                    "jsonSchema": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "terreno": {
+                            "type": "integer"
+                          },
+                          "terreno_nombre": {
+                            "type": "string"
+                          },
+                          "nombre": {
+                            "type": "string"
+                          },
+                          "tipo": {
+                            "type": "string"
+                          },
+                          "tipo_display": {
+                            "type": "string"
+                          },
+                          "activo": {
+                            "type": "boolean"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "terreno",
+                          "terreno_nombre",
+                          "nombre",
+                          "tipo",
+                          "tipo_display",
+                          "activo"
+                        ]
+                      }
+                    },
+                    "contentType": "json"
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "required": true,
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 48,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [],
+                "visibility": "INHERITED",
+                "moduleId": 1533797,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "Detalle Punto de Acceso",
+              "api": {
+                "id": "47656674",
+                "method": "get",
+                "path": "/api/puntos-acceso/1/",
+                "parameters": {},
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "187230842",
+                    "code": 200,
+                    "name": "Correcto",
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "terreno": {
+                          "type": "integer"
+                        },
+                        "terreno_nombre": {
+                          "type": "string"
+                        },
+                        "nombre": {
+                          "type": "string"
+                        },
+                        "tipo": {
+                          "type": "string"
+                        },
+                        "tipo_display": {
+                          "type": "string"
+                        },
+                        "activo": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "terreno",
+                        "terreno_nombre",
+                        "nombre",
+                        "tipo",
+                        "tipo_display",
+                        "activo"
+                      ]
+                    },
+                    "contentType": "json"
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "required": true,
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 58,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [],
+                "visibility": "INHERITED",
+                "moduleId": 1533797,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "Actualizar Punto de Acceso",
+              "api": {
+                "id": "47656724",
+                "method": "patch",
+                "path": "/api/puntos-acceso/4/",
+                "parameters": {},
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "191442961",
+                    "code": 200,
+                    "name": "Correcto",
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "terreno": {
+                          "type": "integer"
+                        },
+                        "terreno_nombre": {
+                          "type": "string"
+                        },
+                        "nombre": {
+                          "type": "string"
+                        },
+                        "tipo": {
+                          "type": "string"
+                        },
+                        "tipo_display": {
+                          "type": "string"
+                        },
+                        "activo": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "terreno",
+                        "terreno_nombre",
+                        "nombre",
+                        "tipo",
+                        "tipo_display",
+                        "activo"
+                      ]
+                    },
+                    "contentType": "json"
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {}
+                  },
+                  "required": true,
+                  "mediaType": "",
+                  "examples": [
+                    {
+                      "mediaType": "application/json",
+                      "value": "{\"activo\": true}"
+                    }
+                  ],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 68,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [],
+                "visibility": "INHERITED",
+                "moduleId": 1533797,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "Eliminar Punto Acceso",
+              "api": {
+                "id": "47657991",
+                "method": "delete",
+                "path": "/api/puntos-acceso/5/",
+                "parameters": {},
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                },
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "136575842",
+                    "code": 204,
+                    "name": "Sin contenido",
+                    "contentType": "noContent"
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {}
+                  },
+                  "required": true,
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 78,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [],
+                "visibility": "INHERITED",
+                "moduleId": 1533797,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "Rechazo: Nombre duplicado",
+              "api": {
+                "id": "47658277",
+                "method": "post",
+                "path": "/api/puntos-acceso/",
+                "parameters": {},
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "138983514",
+                    "code": 400,
+                    "name": "Solicitud incorrecta",
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {
+                        "non_field_errors": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "required": [
+                        "non_field_errors"
+                      ]
+                    },
+                    "contentType": "json"
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {}
+                  },
+                  "required": true,
+                  "mediaType": "",
+                  "examples": [
+                    {
+                      "mediaType": "application/json",
+                      "value": "{\"terreno\": 1, \"nombre\": \"Portón Principal\", \"tipo\": \"porton\", \"activo\": true}"
+                    }
+                  ],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 88,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [],
+                "visibility": "INHERITED",
+                "moduleId": 1533797,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "Rechazo: Terreno Inexistente",
+              "api": {
+                "id": "47658278",
+                "method": "post",
+                "path": "/api/puntos-acceso/",
+                "parameters": {},
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "138983514",
+                    "code": 400,
+                    "name": "Solicitud incorrecta",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {
+                        "non_field_errors": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "required": [
+                        "non_field_errors"
+                      ]
+                    },
+                    "itemSchema": {},
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {}
+                  },
+                  "required": true,
+                  "mediaType": "",
+                  "examples": [
+                    {
+                      "mediaType": "application/json",
+                      "value": "{\"terreno\": 999, \"nombre\": \"Puerta Fantasma\", \"tipo\": \"puerta\", \"activo\": true}"
+                    }
+                  ],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 94,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [],
+                "visibility": "INHERITED",
+                "moduleId": 1533797,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "Rechazo: Tipo Invalido",
+              "api": {
+                "id": "47658279",
+                "method": "post",
+                "path": "/api/puntos-acceso/",
+                "parameters": {},
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "138983514",
+                    "code": 400,
+                    "name": "Solicitud incorrecta",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {
+                        "non_field_errors": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "required": [
+                        "non_field_errors"
+                      ]
+                    },
+                    "itemSchema": {},
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {}
+                  },
+                  "required": true,
+                  "mediaType": "",
+                  "examples": [
+                    {
+                      "mediaType": "application/json",
+                      "value": "{\"terreno\": 1, \"nombre\": \"Puerta Rara\", \"tipo\": \"ventana\", \"activo\": true}"
+                    }
+                  ],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 100,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [],
+                "visibility": "INHERITED",
+                "moduleId": 1533797,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "Rechazo: Nombre Vacio",
+              "api": {
+                "id": "47658280",
+                "method": "post",
+                "path": "/api/puntos-acceso/",
+                "parameters": {},
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "138983514",
+                    "code": 400,
+                    "name": "Solicitud incorrecta",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {
+                        "non_field_errors": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "required": [
+                        "non_field_errors"
+                      ]
+                    },
+                    "itemSchema": {},
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {}
+                  },
+                  "required": true,
+                  "mediaType": "",
+                  "examples": [
+                    {
+                      "mediaType": "application/json",
+                      "value": "{\"terreno\": 1, \"nombre\": \"   \", \"tipo\": \"puerta\", \"activo\": true}"
+                    }
+                  ],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 97,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [],
+                "visibility": "INHERITED",
+                "moduleId": 1533797,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "Rechazo: Sin token",
+              "api": {
+                "id": "47658355",
+                "method": "get",
+                "path": "/api/puntos-acceso/",
+                "parameters": {},
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "110696072",
+                    "code": 200,
+                    "name": "Correcto",
+                    "jsonSchema": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "terreno": {
+                            "type": "integer"
+                          },
+                          "terreno_nombre": {
+                            "type": "string"
+                          },
+                          "nombre": {
+                            "type": "string"
+                          },
+                          "tipo": {
+                            "type": "string"
+                          },
+                          "tipo_display": {
+                            "type": "string"
+                          },
+                          "activo": {
+                            "type": "boolean"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "terreno",
+                          "terreno_nombre",
+                          "nombre",
+                          "tipo",
+                          "tipo_display",
+                          "activo"
+                        ]
+                      }
+                    },
+                    "contentType": "json"
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "required": true,
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 43,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [],
+                "visibility": "INHERITED",
+                "moduleId": 1533797,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            }
+          ]
+        },
+        {
           "name": "Login JWT",
           "api": {
             "id": "47580784",
@@ -152,7 +1559,7 @@
               "examples": [
                 {
                   "mediaType": "application/json",
-                  "value": "{\r\n  \"username\": \"usuario_prueba\",\r\n  \"password\": \"su_clave\"\r\n}"
+                  "value": "{\r\n  \"username\": \"superuser\",\r\n  \"password\": \"Admin123@\"\r\n}"
                 }
               ],
               "oasExtensions": ""

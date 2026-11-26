@@ -37,3 +37,29 @@ class Vivienda(models.Model):
 
     def __str__(self):
         return f"{self.get_tipo_display()} {self.identificador} - {self.terreno}"
+
+class PuntoAcceso(models.Model):
+    class Tipo(models.TextChoices):
+        PUERTA = "puerta", "Puerta"
+        PORTON = "porton", "Portón"
+
+    # PROTECT: no se puede borrar un terreno que todavía tiene puntos de acceso.
+    terreno = models.ForeignKey(
+        Terreno, on_delete=models.PROTECT, related_name="puntos_acceso"
+    )
+    nombre = models.CharField(max_length=100)
+    tipo = models.CharField(max_length=20, choices=Tipo.choices)
+    activo = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ["terreno", "nombre"]
+        verbose_name_plural = "puntos de acceso"
+        constraints = [
+            models.UniqueConstraint(
+                fields=["terreno", "nombre"],
+                name="punto_acceso_unico_por_terreno",
+            )
+        ]
+
+    def __str__(self):
+        return f"{self.nombre} - {self.terreno}"
