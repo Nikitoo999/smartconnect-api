@@ -1,10 +1,16 @@
 from django.db import models
-
-
-from django.db import models
-
+from django.conf import settings
 
 class Persona(models.Model):
+    
+    usuario = models.OneToOneField(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="persona"
+    )
+
     identificador = models.CharField(max_length=20, unique=True)
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
